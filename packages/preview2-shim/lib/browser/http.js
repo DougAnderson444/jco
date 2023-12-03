@@ -1,4 +1,11 @@
-import { UnexpectedError } from "../http/error.js";
+class UnexpectedError {
+  constructor(msg) {
+    this.msg = msg;
+  }
+  toDebugString() {
+    return this.msg;
+  }
+}
 
 /**
  * @param {import("../../types/interfaces/wasi-http-types").Request} req
