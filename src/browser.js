@@ -1,3 +1,8 @@
+import {
+  $init,
+  generate,
+  generateTypes,
+} from "../obj/js-component-bindgen-component.js";
 
 // The anonymous function will return a promise, which we will await before calling generate
 let initialized = (() =>
