@@ -14,11 +14,11 @@ let initialized = (() =>
   }))();
 
 /**
- * Transpile a component into a JS module
- * @param {Object} component - The component to transpile
- * @param {Object} options - Options for transpiling
+ * Transpile a component into a JS module.
+ * @param {Object} component - The component to transpile.
+ * @param {Object} options - Options for transpiling.
  *
- * @returns {Promise} - A promise that resolves to the transpiled component
+ * @returns {Promise<{ files, imports, exports }>} - A promise that resolves to an object containing the transpiled component's files, imports, and exports.
  */
 export const transpile = function (component, options) {
   // if $init has not yet resolved, wait for it to resolve
