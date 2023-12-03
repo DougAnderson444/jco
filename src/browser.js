@@ -13,6 +13,13 @@ let initialized = (() =>
     });
   }))();
 
+/**
+ * Transpile a component into a JS module
+ * @param {Object} component - The component to transpile
+ * @param {Object} options - Options for transpiling
+ *
+ * @returns {Promise} - A promise that resolves to the transpiled component
+ */
 export const transpile = function (component, options) {
   // if $init has not yet resolved, wait for it to resolve
   // before calling generate
