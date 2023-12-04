@@ -2,7 +2,7 @@
 node_modules
 /target
 package-lock.json
-/obj
+# /obj
 /dist
 /test/output
 /jco.sh
