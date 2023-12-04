@@ -47,3 +47,15 @@ anyhow = { workspace = true }
 tempdir = { workspace = true }
 xshell = { workspace = true }
 test-utils = { path = "./crates/test-utils" }
+
+[profile.release]
+codegen-units = 1        # allow for maximum size reduction optimizations
+debug = false
+debug-assertions = false
+incremental = false
+lto = true               # Enable Link Time Optimization
+opt-level = 'z'          # Optimize for size
+overflow-checks = false
+panic = 'abort'          # Abort on panic
+rpath = false
+strip = true             # Automatically strip symbols from the binary.
